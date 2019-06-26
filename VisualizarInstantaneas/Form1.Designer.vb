@@ -23,6 +23,7 @@ Partial Class FrmInstantaneas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmInstantaneas))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.LblEjecutar = New System.Windows.Forms.Label()
         Me.lblhora = New System.Windows.Forms.Label()
@@ -71,8 +72,8 @@ Partial Class FrmInstantaneas
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Fecha1 = New System.Windows.Forms.Label()
         Me.Lbltipo2 = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LabelTipo = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -136,7 +137,7 @@ Partial Class FrmInstantaneas
         Me.TableLayoutPanel1.Controls.Add(Me.LabelTipo, 3, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 12
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.15559!))
@@ -748,9 +749,6 @@ Partial Class FrmInstantaneas
         Me.Lbltipo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Lbltipo2.Visible = False
         '
-        'Timer1
-        '
-        '
         'LabelTipo
         '
         Me.LabelTipo.BackColor = System.Drawing.Color.CornflowerBlue
@@ -764,6 +762,9 @@ Partial Class FrmInstantaneas
         Me.LabelTipo.Text = "ppm"
         Me.LabelTipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Timer1
+        '
+        '
         'FrmInstantaneas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -772,7 +773,8 @@ Partial Class FrmInstantaneas
         Me.ClientSize = New System.Drawing.Size(765, 843)
         Me.ControlBox = False
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmInstantaneas"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
