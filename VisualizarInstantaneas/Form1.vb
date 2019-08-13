@@ -20,7 +20,7 @@ Public Class FrmInstantaneas
         Me.Location = Screen.PrimaryScreen.WorkingArea.Location
         Me.Size = Screen.PrimaryScreen.WorkingArea.Size
         control = Convert.ToInt32(ConfigurationSettings.AppSettings("ControlSeleccionado"))
-        cargarinstantaneas()
+        'cargarinstantaneas()
         Call TiempoEjecutar(15)
     End Sub
 
